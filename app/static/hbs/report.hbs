@@ -1,0 +1,33 @@
+      <p>
+        <strong>Duración</strong>: {{duration.hours}}:{{duration.minutes}}:{{duration.seconds}}<br>
+        <strong>Referencia</strong>: {{reference}}<br>
+        <strong>Producto</strong>: {{product}}<br>
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Estación</th>
+            <th>Entraron</th>
+            <th>Salieron</th>
+            <th>Tasa llegadas (botellas/min)</th>
+            <th>Tiempo servicio (min/botella)</th>
+            <th>Velocidad (botellas/min)</th>
+            <th>Operador</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each stations}}
+          <tr>
+            <td>{{@index}}</td>
+            <td>{{in}}</td>
+            <td>{{out}}</td>
+            <td>{{arrivals}}</td>
+            <td>{{avg}}</td>
+            <td>{{speed}}</td>
+            <td>{{operator}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      <p>Una copia de este reporte fue almacenado en <a href="#">Google Drive</a>.</p>
+ 
