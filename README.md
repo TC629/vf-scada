@@ -1,12 +1,27 @@
 Introducción
 ============
-Un SCADA para una línea de embotellado.
+Se diseñó un sistema “SCADA” que permite evaluar el desempeño de cada estación de la línea de embotellado en tiempo real desde un navegador.
+Se colocan detectores de botellas en puntos específicos (en la entrada de cada estación) para detectar cuando una botella entra y sale de una estación. De esta forma, se puede determinar el tiempo promedio de una botella en el sistema y en cada estación.
+Actualmente 
 
-* [Descripción](#)
-* [Materiales](#)
-* [Cómo configurar el pcDuino](#)
-* [Detalles de implementación](#)
-* [Licencia](#)
+![Vista de la aplicación en funcionamiento](http://i.imgur.com/AW6n2I1.png)
+
+Documentación
+-------------
+* [Manual](doc/manual.md)
+* [Materiales](doc/materials.md)
+* [¿Cómo configurar el pcDuino?](doc/pcduino.md)
+
+Características
+---------------
+En ningún orden en particular:
+
+* **Tiempo real**: se pueden observar los eventos en el momento que ocurren.
+* **Sistema independiente**: no altera ningún mecanismo de la línea de producción.
+* **Automatización de la toma de tiempos**: los operarios no tendrían que llevar bitácoras manuales.
+* **Supervisión remota**: El supervisor puede evaluar la línea de producción desde la comodidad de su escritorio, su tableta o móvil.
+* **Multiusuario**: muchos navegadores pueden abrir el programa y ver todos el mismo estado.
+* **Extendible**: actualmente solo utiliza sensores, el en futuro se puede agregar funcionalidad para operar actuadores.
 
 Instalación
 ===========
