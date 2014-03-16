@@ -2,7 +2,13 @@ Introducción
 ============
 Se diseñó un sistema “SCADA” que permite evaluar el desempeño de cada estación de la línea de embotellado en tiempo real desde un navegador.
 Se colocan detectores de botellas en puntos específicos (en la entrada de cada estación) para detectar cuando una botella entra y sale de una estación. De esta forma, se puede determinar el tiempo promedio de una botella en el sistema y en cada estación.
-Actualmente 
+Actualmente los detectores de botellas se simulan utilizando botones.
+
+¿Cómo funciona?
+---------------
+Hay dos programas: el [servidor](app/app.js) y el [cliente](app/static/js/client.js).
+El servidor se encarga de esperar eventos y procesarlos cuando suceden. También sincroniza los clientes.
+El cliente es un programa que corre en el navegador del usuario, se conecta al servidor y permite operar el SCADA y mostrar el estado actual del sistema.
 
 ![Vista de la aplicación en funcionamiento](http://i.imgur.com/AW6n2I1.png)
 
@@ -22,6 +28,11 @@ En ningún orden en particular:
 * **Supervisión remota**: El supervisor puede evaluar la línea de producción desde la comodidad de su escritorio, su tableta o móvil.
 * **Multiusuario**: muchos navegadores pueden abrir el programa y ver todos el mismo estado.
 * **Extendible**: actualmente solo utiliza sensores, el en futuro se puede agregar funcionalidad para operar actuadores.
+
+Notas
+-----
+* No incluye autenticación ni autorización de usuarios: cualquier usuario con acceso a la red interna y a un navegador puede operar el SCADA.
+* Requiere una IP fija dentro de la red local, si se desea utilizar con un pcDuino.
 
 Instalación
 ===========
