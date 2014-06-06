@@ -128,6 +128,7 @@ function clickStart() {
 
 // Updates UI with start data.
 function processStart(data) {
+  console.log(data);
   // Start ticking timer
   updateTimerID = setInterval(function() { updateTimer(data.startTime); }, 1000);
   // Update control panel UI
@@ -139,7 +140,7 @@ function processStart(data) {
   $("#reference").val(data.reference);
   $("#product").val(data.product);
   for(var i = 1; i < data.stations.length; ++i) {
-    $("#operator"+i-1).val(data.stations[i].operator);
+    $("#operator"+(i-1)).val(data.stations[i].operator);
   }
   $("#canvas").removeClass("hidden").addClass("show");
   $("#report").removeClass("show").addClass("hidden");
