@@ -128,7 +128,6 @@ function clickStart() {
 
 // Updates UI with start data.
 function processStart(data) {
-  console.log(data);
   // Start ticking timer
   updateTimerID = setInterval(function() { updateTimer(data.startTime); }, 1000);
   // Update control panel UI
